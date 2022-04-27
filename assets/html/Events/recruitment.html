@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="Navigation Bar, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie-edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"
+      integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o="
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/hamburger.css" />
+  </head>
+
+  <body>
+    <!-- Navbar Starts From Here -->
+    <nav>
+      <div class="logo">
+        <div class="Nav_logo">
+          <img src="assets/img/Logo.png" />
+          <!--NAVIGATION EDC Logo-->
+        </div>
+        <div class="edctxt">
+          <h1><b>ENTREPRENEURSHIP DEVELOPMENT CELL</b></h1>
+          <!-- NAVIGATION TEXT-->
+        </div>
+      </div>
+      <ul class="nav-links">
+        <li id="ue"><a href="#">Events</a></li>
+        <!-- NAVIGATION LINKS / MENUS-->
+        <li id="au"><a href="#">About Us</a></li>
+        <li id="ot"><a href="#">The Team</a></li>
+        <li id="os"><a href="#">Our Sponsors</a></li>
+      </ul>
+      <label class="switch">
+        <input type="checkbox" onclick="changeMode()" />
+        <!--NAVIGATION Slider Dark / Light-->
+        <span class="slider"></span>
+      </label>
+    </nav>
+    <!--NAVIGATION Bar For Mobile Device Along With Hamburger-->
+
+    <header class="l-header">
+      <nav class="nav_2 bd-grid show">
+        <div class="nav__menu nav__menu2" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item"><a href="" class="nav__link">Events</a></li>
+            <!-- NAVIGATION LINKS / MENUS-->
+            <li class="nav__item"><a href="" class="nav__link">About Us</a></li>
+            <li class="nav__item">
+              <a href="" class="nav__link active">The Team</a>
+            </li>
+            <li class="nav__item">
+              <a href="" class="nav__link">Our Sponsors</a>
+            </li>
+          </ul>
+          <span class="icons-hamb">
+            <i class="fab fa-twitter padd-left icon-hover"><a href="#"></a></i>
+            <!-- NAVIGATION Menu Social Icons-->
+            <i class="fab fa-linkedin padd-left icon-hover"></i>
+            <i class="fab fa-instagram padd-left icon-hover"></i>
+          </span>
+        </div>
+        <div class="nav__toggle" id="nav-toggle">
+          <div class="Nav_logo">
+            <img src="assets/img/Logo.png" />
+            <!-- NAVIGATION EDC Logo-->
+          </div>
+          <div class="edctxt">
+            <h1><b>ENTREPRENEURSHIP DEVELOPMENT CELL</b></h1>
+            <!-- NAVIGATION TEXT-->
+          </div>
+          <img src="assets/img/Vector.png" />
+        </div>
+      </nav>
+    </header>
+    <!-- Navbar Ends Here -->
+
+    <!-- Write Your Code From Here -->
+
+    <section class="flx">
+      <img
+        class="evntimg"
+        src="assets/img/esummit.jpeg"
+        alt=""
+      />
+      <div>
+        <h1 class="align headings" style="font-size: 6vh">Recruitment 2021</h1>
+        <div class="align evntdes">
+          <p>
+            The Entrepreneurship Development Cell of Bharati Vidyapeeth (Deemed
+            to be) University, College of Engineering, Pune (Abbreviated as EDC
+            BV(DU) COEP) conducted its annual recruitment recently. There was a
+            challenging competition to get into EDC since it is well renowned
+            among students. This year, the bar was set higher than the previous
+            year in which we received nearly 250 applications, out of which only
+            100 proceeded for the Personal Interview round. Those students were
+            selected based on their written submissions, which were assessed
+            thoroughly by the recruiting panel. The submissions consisted of
+            answers to the elaborative situation-based questions concerning all
+            the domains, which tested the student's descriptive and analytical
+            mind. The Personal Interview round conducted following the
+            submissions on 26th December 2021 brought the spark among the
+            students through several critical thinking and condition-based
+            questions. Finally, a total of 44 students were chosen as the
+            'Junior Associates' of EDC.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer Starts From Here -->
+
+    <footer>
+      <div class="footer">
+        <section class="contact section" id="contact">
+          <h2 class="section-title">Get In Touch</h2>
+          <div>
+            <div>
+              <img src="assets/img/Logo.png" class="footer_Image" />
+              <img src="assets/img/bvucoep.png" class="footer_Image_bvp" />
+              <h2 class="footer__text">
+                Entrepreneurship Development Cell<br />
+                Bharati Vidyapeeth University College of Engineering Pune
+              </h2>
+            </div>
+            <div class="contact__container bd-grid">
+              <form action="" method="POST" class="contact__form">
+                <input
+                  type="text"
+                  placeholder="Name"
+                  name="name"
+                  class="contact__input"
+                />
+                <input
+                  type="mail"
+                  placeholder="Email"
+                  name="email"
+                  class="contact__input"
+                />
+                <textarea
+                  name="message"
+                  placeholder="Message"
+                  cols="0"
+                  rows="10"
+                  class="contact__input"
+                ></textarea>
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_template" value="table" />
+                <input
+                  type="hidden"
+                  name="_next"
+                  value="https://b1tsh3ll.github.io/My-PortfOlio/assets/html/thank_you.html"
+                />
+              </form>
+            </div>
+          </div>
+        </section>
+        <div class="copyright">
+          <h2>Copyright © 2021 Entrepreneurship Development Cell BV(DU)COEP</h2>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="assets/js/hamburger.js"></script>
+</html>

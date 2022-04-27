@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,Navigation Bar, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie-edge">
+  <title>Team | EDC BVUCOEP</title>
+  <link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"
+    integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/hamburger.css">
+  <script src="https://kit.fontawesome.com/5be998b1c7.js" crossorigin="anonymous"></script>
+  <style>
+    .textSize {
+      margin-left: 10px;
+      font-size: 18px;
+
+    }
+
+    .imageSize {
+      margin-left: 13px;
+      width: 90px;
+      height: 90px;
+      border-radius: 50%
+    }
+
+    .yearTextSize {
+      font-size: 14px;
+      margin-top: -8px;
+      margin-left: 10px;
+
+    }
+
+    /* The actual content */
+    .content {
+      padding: 20px 30px;
+      background-color: white;
+      position: relative;
+      border-radius: 6px;
+      width: 290%;
+    }
+
+    /* The circles on the timeline */
+    .container::after {
+      content: '';
+      position: absolute;
+      width: 17px;
+      height: 17px;
+      right: -13px;
+      background-color: black;
+      border: 4px solid black;
+      top: 15px;
+      border-radius: 50%;
+      visibility: hidden;
+    }
+
+
+    /* The actual timeline (the vertical ruler) */
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 6px;
+      background-color: black;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -3px;
+      visibility: hidden;
+    }
+
+    /* Place the container to the right */
+    .right {
+      left: 0px;
+      margin-left: -50%;
+    }
+
+    @media screen and (min-width: 550px) {
+
+      /* Place the container to the right */
+      .right {
+        left: 50%;
+        margin-left: 0px;
+      }
+
+      /* The circles on the timeline */
+      .container::after {
+        content: '';
+        position: absolute;
+        width: 17px;
+        height: 17px;
+        right: -13px;
+        background-color: black;
+        border: 4px solid black;
+        top: 15px;
+        border-radius: 50%;
+        visibility: visible;
+      }
+
+      .timeline::after {
+        content: '';
+        position: absolute;
+        width: 6px;
+        background-color: black;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        margin-left: -3px;
+        visibility: visible;
+
+      }
+
+      .textSize {
+        font-size: 18px;
+        margin-left: 10px;
+      }
+
+      .imageSize {
+        margin-left: 20px;
+        width: 7vw;
+        height: 7vw;
+        border-radius: 50%
+      }
+
+      .yearTextSize {
+        font-size: 1vw;
+        margin-left: 10px;
+      }
+
+      .content {
+        padding: 20px 30px;
+        background-color: white;
+        position: relative;
+        border-radius: 6px;
+        width: 100%;
+        margin-left: 0px;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    /* modal css */
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      max-width: 300px;
+      margin: auto;
+      text-align: center;
+      font-family: arial;
+    }
+
+    .title {
+      color: grey;
+      font-size: 18px;
+    }
+
+    button {
+      border: none;
+      outline: 0;
+      display: inline-block;
+      padding: 8px;
+      color: black;
+      background-color: white;
+      text-align: center;
+      cursor: pointer;
+      width: 50%;
+      font-size: 12px;
+    }
+
+    a {
+      text-decoration: none;
+      font-size: 22px;
+      color: black;
+    }
+
+    button:hover,
+    a:hover {
+      opacity: 0.7;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+
+    }
+
+    /* The Modal (background) */
+    .modal {
+      display: none;
+      /* Hidden by default */
+      position: fixed;
+      /* Stay in place */
+      z-index: 1;
+      /* Sit on top */
+      padding-top: 100px;
+      /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%;
+      /* Full width */
+      height: 100%;
+      /* Full height */
+      overflow: auto;
+      /* Enable scroll if needed */
+      background-color: rgb(0, 0, 0);
+      /* Fallback color */
+      background-color: rgba(0, 0, 0, 0.4);
+      /* Black w/ opacity */
+    }
+
+    /* Modal Content */
+    .modal-content {
+      background-color: #fefefe;
+      margin: auto;
+      padding: 0px;
+      border: 1px solid #888;
+      width: 420px;
+    }
+
+    /* The Close Button */
+    .close {
+      color: #aaaaaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    /* modal css over */
+
+    body {
+      background-color: #E5E5E5;
+      font-family: Helvetica, sans-serif;
+    }
+
+    /* The actual timeline (the vertical ruler) */
+    .timeline {
+      position: relative;
+      max-width: 1200px;
+      margin: 0 auto;
+
+    }
+
+
+
+    /* Container around content */
+    .container {
+      padding: 10px 40px;
+      position: relative;
+      background-color: inherit;
+      width: 50%;
+
+    }
+
+
+
+    /* Place the container to the left */
+    .left {
+      left: 0;
+    }
+
+    /* Place the container to the right */
+    .right {
+      left: 50%;
+    }
+
+    /* Add arrows to the left container (pointing right) */
+    .left::before {
+      content: " ";
+      height: 0;
+      position: absolute;
+      top: 22px;
+      width: 0;
+
+      right: 30px;
+      border: medium solid white;
+      border-width: 10px 0 10px 10px;
+      border-color: transparent transparent transparent white;
+    }
+
+    /* Add arrows to the right container (pointing left) */
+    .right::before {
+      content: " ";
+      height: 0;
+      position: absolute;
+      top: 22px;
+      width: 0;
+
+      left: 30px;
+      border: medium solid white;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent white transparent transparent;
+    }
+
+    /* Fix the circle for containers on the right side */
+    .right::after {
+      left: -13px;
+    }
+
+    /* The actual content 
+    .content {
+      padding: 20px 30px;
+      background-color: white;
+      position: relative;
+      border-radius: 6px;
+    }
+    */
+
+    /* Media queries - Responsive timeline on screens less than 600px wide */
+    @media screen and (max-width: 200px) {
+
+      /* Place the timelime to the left */
+      .timeline::after {
+        left: 31px;
+      }
+
+      /* Full-width containers */
+      .container {
+        position: absolute;
+        width: 518px;
+        height: 257px;
+        left: 834px;
+        top: 256px;
+
+        background: #FFFFFF;
+        box-shadow: 5px 4px 18px 2px rgba(0, 0, 0, 0.1);
+        border-radius: 6px;
+      }
+
+      /* Make sure that all arrows are pointing leftwards */
+      .container::before {
+        left: 60px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+      }
+
+      /* Make sure all circles are at the same spot */
+      .left::after,
+      .right::after {
+        left: 15px;
+      }
+
+      /* Make all right containers behave like the left ones */
+      .right {
+        left: 0%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar Starts From Here -->
+  <nav>
+    <div class="logo">
+      <div class="Nav_logo"><a href="../../../index.html">
+          <img src="assets/img/Logo.png">
+          <!--NAVIGATION EDC Logo-->
+      </div>
+      <div class="edctxt">
+        <h1><b>ENTREPRENEURSHIP DEVELOPMENT CELL</b></h1> <!-- NAVIGATION TEXT-->
+      </div>
+      </a>
+    </div>
+    <ul class="nav-links">
+      <li id="ue"><a href="../Events/index.html">Events</a></li> <!-- NAVIGATION LINKS / MENUS-->
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">SIPP</a>
+        <div class="dropdown-content">
+          <a href="https://edcbvducoep.github.io/SIPP/">About SIPP</a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScU95aSu1689Ij3fFBk2uVkQuAUfu1hihJnbsjAa4CM9WjECQ/viewform">Register For SIPP</a>
+          <a href="https://bvpit-my.sharepoint.com/personal/contact-edc_bvucoep_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fcontact%2Dedc%5Fbvucoep%5Fedu%5Fin%2FDocuments%2FSIPP%20JD">Active JDs</a>
+          <a href="https://www.youtube.com/watch?v=Fydv-IcsPAM">How to Build a Resume</a>
+        </div>
+      </li>
+      <li id="au"><a href="../About Us/index.html">About Us</a></li>
+      <li id="ot"><a href="../team/team.html">The Team</a></li>
+      <!-- <li id="os"><a href="../Our Sponsors/index.html">Our Sponsors</a></li> -->
+    </ul>
+  </nav>
+  <!--NAVIGATION Bar For Mobile Device Along With Hamburger-->
+
+  <header class="l-header">
+    <nav class="nav_2 bd-grid show">
+      <div class="nav__menu nav__menu2" id="nav-menu">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="../Events/index.html" class="nav__link">Events</a></li>
+          <!-- NAVIGATION LINKS / MENUS-->
+          <li class="nav__item"><a href="../About Us/index.html" class="nav__link">About Us</a></li>
+          <li class="nav__item"><a href="../team/team.html" class="nav__link active">The Team</a></li>
+          <!-- <li class="nav__item"><a href="../Our Sponsors/index.html" class="nav__link">Our Sponsors</a></li> -->
+        </ul>
+        <span class="icons-hamb">
+          <i class="fab fa-twitter  padd-left icon-hover"><a href="#"></a></i>
+          <!-- NAVIGATION Menu Social Icons-->
+          <i class="fab fa-linkedin padd-left icon-hover"></i>
+          <i class="fab fa-instagram padd-left icon-hover"></i>
+        </span>
+      </div>
+      <div class="nav__toggle" id="nav-toggle">
+        <div class="Nav_logo">
+          <img src="assets/img/Logo.png"> <!-- NAVIGATION EDC Logo-->
+        </div>
+        <div class="edctxt">
+          <h1><b>ENTREPRENEURSHIP DEVELOPMENT CELL</b></h1> <!-- NAVIGATION TEXT-->
+        </div>
+        <img src="assets/img/Vector.png">
+      </div>
+    </nav>
+  </header>
+  <!-- Navbar Ends Here -->
+
+  <!-- Write Your Code From Here -->
+  <div style="width: 100%;" id="blur" class="main-cc">
+    <h1 style="margin-left: 100px;  margin-top: 5%; margin-bottom: 5%;">Our Heads</h1>
+    <div class="timeline">
+      <div class="container left">
+        <div class="content">
+          <table>
+            <tr>
+              <td> <img class="imageSize" src="./assets/img/kabir.jpeg" alt=""> </td>
+
+              <td>
+                <h2 class="textSize">Kabir Makhija</h2>
+                <p class="yearTextSize">2020-2021
+
+                </p>
+            </tr>
+          </table>
+          <!-- Trigger/Open The Modal -->
+          <button style="margin-left: 66px;" id="myBtn" onclick="toggle()">View The Team</button>
+          <!-- The Modal -->
+          <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <h1 style="margin-left: 20px;">The Team</h1>
+              <h2 style="margin-left: 20px;">Head</h2>
+              <!-- Card Start -->
+              <table
+                style=" margin-left: 15px; margin-top: 15px; box-shadow: 5px 4px 18px 2px rgba(0, 0, 0, 0.1); background-color:#FFFFFF;border-color:white;border-radius:6px;padding:10px;">
+                <td><img style="width:90px;height:90px;border-radius:50%" src="./assets/img/kabir.jpeg" alt="">
+                </td>
+                <td>
+                  <div style="margin-left:10px;margin-top:-20px;width: 200px;">
+                    <h3>Kabir Makhija</h3>
+                    <p style="margin-top:-15px;color:black;font-size: 15px;">Head</p>
+                    <div style="margin-top:-12px;">
+                      <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+                      <a href="https://www.linkedin.com"><i class="fab fa-linkedin"></i></a>
+                      <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                    </div>
+                  </div>
+                </td>
+              </table>
+              <!-- Card End -->
+              <h2 style="margin-left: 20px;">Domain Head</h2>
+
+              <!-- Card collage begin-->
+              <div style="width: 100%;">
+                <!-- 3*1 Table Card start-->
+                <table>
+
+                  <!-- Card Start -->
+                  <table
+                    style=" margin-left: 15px; margin-top: 15px; box-shadow: 5px 4px 18px 2px rgba(0, 0, 0, 0.1); background-color:#FFFFFF;border-color:white;border-radius:6px;padding:10px;">
+                    <td><img style="width:90px;height:90px;border-radius:50%" src="https://source.unsplash.com/random"
+                        alt="">
+                    </td>
+                    <td>
+                      <div style="margin-left:10px;margin-top:-20px ;width: 200px;">
+                        <h3>Shubham Pawaskar</h3>
+                        <p style="margin-top:-15px;color:black;font-size: 15px;">Humar Resources Head</p>
+                        <div style="margin-top:-12px;">
+                          <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+                          <a href="https://www.linkedin.com"><i class="fab fa-linkedin"></i></a>
+                          <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                        </div>
+                      </div>
+                    </td>
+                  </table>
+                  <!-- Card End -->
+
+
+                  <!-- Card Start -->
+                  <table
+                    style="margin-left: 15px; margin-top: 15px; box-shadow: 5px 4px 18px 2px rgba(0, 0, 0, 0.1); background-color:#FFFFFF;border-color:white;border-radius:6px;padding:10px;">
+                    <td><img style="width:90px;height:90px;border-radius:50%" src="https://source.unsplash.com/random"
+                        alt="">
+                    </td>
+                    <td>
+                      <div style="margin-left:10px;margin-top:-20px;width: 200px;">
+                        <h3>Sakshi Sinha</h3>
+                        <p style="margin-top:-15px;color:black;font-size: 15px;">Human Resources Head</p>
+                        <div style="margin-top:-12px;">
+                          <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+                          <a href="https://www.linkedin.com"><i class="fab fa-linkedin"></i></a>
+                          <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                        </div>
+                      </div>
+                    </td>
+                  </table>
+                  <!-- Card End -->
+
+
+                  <!-- Card Start -->
+                  <table
+                    style=" margin-left: 15px; margin-top: 15px; box-shadow: 5px 4px 18px 2px rgba(0, 0, 0, 0.1); background-color:#FFFFFF;border-color:white;border-radius:6px;padding:10px;">
+                    <td><img style="width:90px;height:90px;border-radius:50%" src="https://source.unsplash.com/random"
+                        alt="">
+                    </td>
+                    <td>
+                      <div style="margin-left:10px;margin-top:-20px;width: 200px;">
+                        <h3>Jayesh Patil</h3>
+                        <p style="margin-top:-15px;color:black;font-size: 15px;">Corporate Relation Head</p>
+                        <div style="margin-top:-12px;">
+                          <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+                          <a href="https://www.linkedin.com"><i class="fab fa-linkedin"></i></a>
+                          <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                        </div>
+                      </div>
+                    </td>
+                  </table>
+                  <!-- Card End -->
+
+
+                </table>
+                <!-- Card End -->
+
+                </table>
+                <!-- 3*1 Table Card end -->
+                <!-- 3*1 Table Card start-->
+                <table>
+
+                  <!-- Card Start -->
+                  <table
+                    style=" margin-left: 15px; margin-top: 15px; box-shadow: 5px 4px 18px 2px rgba(0, 0, 0, 0.1); background-color:#FFFFFF;border-color:white;border-radius:6px;padding:10px;">
+                    <td><img style="width:90px;height:90px;border-radius:50%" src="https://source.unsplash.com/random"
+                        alt="">
+                    </td>
+                    <td>
+                      <div style="margin-left:10px;margin-top:-20px;width: 200px;">
+                        <h3>Kumar Gaurav</h3>
+                        <p style="margin-top:-15px;color:black;font-size: 15px;">Technical and Innovation Head</p>
+                        <div style="margin-top:-12px;">
+                          <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+                          <a href="https://www.linkedin.com"><i class="fab fa-linkedin"></i></a>
+                          <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                        </div>
+                      </div>
+                    </td>
+                  </table>
+                  <!-- Card End -->
+
+                  <!-- Card Start -->
+                  <table
+                    style=" margin-left: 15px; margin-top: 15px; box-shadow: 5px 4px 18px 2px rgba(0, 0, 0, 0.1); background-color:#FFFFFF;border-color:white;border-radius:6px;padding:10px;">
+                    <td><img style="width:90px;height:90px;border-radius:50%" src="assets/img/team/asthasaxena.jpeg"
+                        alt="">
+                    </td>
+                    <td>
+                      <div style="margin-left:10px;margin-top:-20px;width: 200px;">
+                        <h3>Aastha Saxena</h3>
+                        <p style="margin-top:-15px;color:black;font-size: 15px;">Graphic Designing Head</p>
+                        <div style="margin-top:-12px;">
+                          <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+                          <a href="https://www.linkedin.com"><i class="fab fa-linkedin"></i></a>
+                          <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                        </div>
+                      </div>
+                    </td>
+                  </table>
+                  <!-- Card End -->
+
+                  <!-- Card Start -->
+                  <table
+                    style=" margin-left: 15px; margin-top: 15px; box-shadow: 5px 4px 18px 2px rgba(0, 0, 0, 0.1); background-color:#FFFFFF;border-color:white;border-radius:6px;padding:10px;">
+                    <td><img style="width:90px;height:90px;border-radius:50%" src="https://source.unsplash.com/random"
+                        alt="">
+                    </td>
+                    <td>
+                      <div style="margin-left:10px;margin-top:-20px;width: 200px;">
+                        <h3>Pranshu Gupta</h3>
+                        <p style="margin-top:-15px;color:black;font-size: 15px;">Graphic Designing Co-Head</p>
+                        <div style="margin-top:-12px;">
+                          <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+                          <a href="https://www.linkedin.com"><i class="fab fa-linkedin"></i></a>
+                          <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                        </div>
+                      </div>
+                    </td>
+                  </table>
+                  <!-- Card End -->
+
+
+                </table>
+                <!-- 3*1 Table Card end -->
+
+                <!-- 3*1 Table Card start-->
+                <table>
+
+                  <!-- Card Start -->
+                  <table
+                    style=" margin-left: 15px; margin-top: 15px; box-shadow: 5px 4px 18px 2px rgba(0, 0, 0, 0.1); background-color:#FFFFFF;border-color:white;border-radius:6px;padding:10px;">
+                    <td><img style="width:90px;height:90px;border-radius:50%" src="https://source.unsplash.com/random"
+                        alt="">
+                    </td>
+                    <td>
+                      <div style="margin-left:10px;margin-top:-20px;width: 200px;">
+                        <h3>Sanchit Saxena</h3>
+                        <p style="margin-top:-15px;color:black;font-size: 15px;">Media and Outreach Co-Head</p>
+                        <div style="margin-top:-12px;">
+                          <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+                          <a href="https://www.linkedin.com"><i class="fab fa-linkedin"></i></a>
+                          <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                        </div>
+                      </div>
+                    </td>
+                  </table>
+                  <!-- Card End -->
+
+                  <!-- Card Start -->
+                  <table
+                    style=" margin-left: 15px; margin-top: 15px; box-shadow: 5px 4px 18px 2px rgba(0, 0, 0, 0.1); background-color:#FFFFFF;border-color:white;border-radius:6px;padding:10px;">
+                    <td><img style="width:90px;height:90px;border-radius:50%" src="https://source.unsplash.com/random"
+                        alt="">
+                    </td>
+                    <td>
+                      <div style="margin-left:10px;margin-top:-20px;width: 200px;">
+                        <h3>Vandit Jain</h3>
+                        <p style="margin-top:-15px;color:black;font-size: 15px;">Publication Head</p>
+                        <div style="margin-top:-12px;">
+                          <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+                          <a href="https://www.linkedin.com"><i class="fab fa-linkedin"></i></a>
+                          <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                        </div>
+                      </div>
+                    </td>
+                  </table>
+                  <!-- Card End -->
+
+                  <!-- Card Start -->
+                  <table
+                    style=" margin-left: 15px; margin-top: 15px; box-shadow: 5px 4px 18px 2px rgba(0, 0, 0, 0.1); background-color:#FFFFFF;border-color:white;border-radius:6px;padding:10px;">
+                    <td><img style="width:90px;height:90px;border-radius:50%" src="https://source.unsplash.com/random"
+                        alt="">
+                    </td>
+                    <td>
+                      <div style="margin-left:10px;margin-top:-20px;width: 200px;">
+                        <h3>Vishakha Jain</h3>
+                        <p style="margin-top:-15px;color:black;font-size: 15px;">Publication Co-Head</p>
+                        <div style="margin-top:-12px;">
+                          <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+                          <a href="https://www.linkedin.com"><i class="fab fa-linkedin"></i></a>
+                          <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                        </div>
+                      </div>
+                    </td>
+                  </table>
+                  <!-- Card End -->
+
+                </table>
+                <!-- 3*1 Table Card end -->
+
+                <!-- 3*1 Table Card start-->
+                <table>
+
+                  <!-- Card Start -->
+                  <table
+                    style=" margin-left: 15px; margin-top: 15px; box-shadow: 5px 4px 18px 2px rgba(0, 0, 0, 0.1); background-color:#FFFFFF;border-color:white;border-radius:6px;padding:10px;">
+                    <td><img style="width:90px;height:90px;border-radius:50%" src="https://source.unsplash.com/random"
+                        alt="">
+                    </td>
+                    <td>
+                      <div style="margin-left:10px;margin-top:-20px;width: 200px;">
+                        <h3>Animesh Khumavat</h3>
+                        <p style="margin-top:-15px;color:black;font-size: 15px;">Corporate Relation Co Head</p>
+                        <div style="margin-top:-12px;">
+                          <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+                          <a href="https://www.linkedin.com"><i class="fab fa-linkedin"></i></a>
+                          <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                        </div>
+                      </div>
+                    </td>
+                  </table>
+                  <!-- Card End -->
+
+                  <!-- Card Start -->
+                  <table
+                    style=" margin-left: 15px; margin-top: 15px; box-shadow: 5px 4px 18px 2px rgba(0, 0, 0, 0.1); background-color:#FFFFFF;border-color:white;border-radius:6px;padding:10px;">
+                    <td><img style="width:90px;height:90px;border-radius:50%" src="https://source.unsplash.com/random"
+                        alt="">
+                    </td>
+                    <td>
+                      <div style="margin-left:10px;margin-top:-20px;width: 200px;">
+                        <h3>Sparsh Gupta</h3>
+                        <p style="margin-top:-15px;color:black;font-size: 15px;">Media and Outreach Head</p>
+                        <div style="margin-top:-12px;">
+                          <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+                          <a href="https://www.linkedin.com"><i class="fab fa-linkedin"></i></a>
+                          <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                        </div>
+                      </div>
+                    </td>
+                  </table>
+                  <!-- Card End -->
+
+                  <!-- Card Start -->
+                  <table
+                    style=" margin-left: 15px; margin-top: 15px; box-shadow: 5px 4px 18px 2px rgba(0, 0, 0, 0.1); background-color:#FFFFFF;border-color:white;border-radius:6px;padding:10px;">
+                    <td><img style="width:90px;height:90px;border-radius:50%" src="https://source.unsplash.com/random"
+                        alt="">
+                    </td>
+                    <td>
+                      <div style="margin-left:10px;margin-top:-20px;width: 200px;">
+                        <h3>Shimul Gupta</h3>
+                        <p style="margin-top:-15px;color:black;font-size: 15px;">Marketing Head</p>
+                        <div style="margin-top:-12px;">
+                          <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+                          <a href="https://www.linkedin.com"><i class="fab fa-linkedin"></i></a>
+                          <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                        </div>
+                      </div>
+                    </td>
+                  </table>
+                  <!-- Card End -->
+
+                </table>
+                <!-- 3*1 Table Card end -->
+                <!-- 3*1 Table Card start-->
+                <table>
+
+                  <!-- Card Start -->
+                  <table
+                    style=" margin-left: 15px; margin-top: 15px; box-shadow: 5px 4px 18px 2px rgba(0, 0, 0, 0.1); background-color:#FFFFFF;border-color:white;border-radius:6px;padding:10px;">
+                    <td><img style="width:90px;height:90px;border-radius:50%" src="https://source.unsplash.com/random"
+                        alt="">
+                    </td>
+                    <td>
+                      <div style="margin-left:10px;margin-top:-20px;width: 200px;">
+                        <h3>Aditya Bhateja</h3>
+                        <p style="margin-top:-15px;color:black;font-size: 15px;">Marketing Co-Head</p>
+                        <div style="margin-top:-12px;">
+                          <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+                          <a href="https://www.linkedin.com"><i class="fab fa-linkedin"></i></a>
+                          <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                        </div>
+                      </div>
+                    </td>
+                  </table>
+                  <!-- Card End -->
+
+                  <!-- Card Start -->
+                  <table
+                    style=" margin-left: 15px; margin-top: 15px; box-shadow: 5px 4px 18px 2px rgba(0, 0, 0, 0.1); background-color:#FFFFFF;border-color:white;border-radius:6px;padding:10px;">
+                    <td><img style="width:90px;height:90px;border-radius:50%" src="https://source.unsplash.com/random"
+                        alt="">
+                    </td>
+                    <td>
+                      <div style="margin-left:10px;margin-top:-20px;width: 200px;">
+                        <h3>Devansh Verma</h3>
+                        <p style="margin-top:-15px;color:black;font-size: 15px;">Public Relation Head</p>
+                        <div style="margin-top:-12px;">
+                          <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+                          <a href="https://www.linkedin.com"><i class="fab fa-linkedin"></i></a>
+                          <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                        </div>
+                      </div>
+                    </td>
+                  </table>
+                  <!-- Card End -->
+
+                  <!-- Card Start -->
+                  <table
+                    style=" margin-left: 15px; margin-top: 15px; box-shadow: 5px 4px 18px 2px rgba(0, 0, 0, 0.1); background-color:#FFFFFF;border-color:white;border-radius:6px;padding:10px;">
+                    <td><img style="width:90px;height:90px;border-radius:50%" src="https://source.unsplash.com/random"
+                        alt="">
+                    </td>
+                    <td>
+                      <div style="margin-left:10px;margin-top:-20px;width: 200px;">
+                        <h3>Nikhil Amauriya</h3>
+                        <p style="margin-top:-15px;color:black;font-size: 15px;">Public Relation Co-Head</p>
+                        <div style="margin-top:-12px;">
+                          <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+                          <a href="https://www.linkedin.com"><i class="fab fa-linkedin"></i></a>
+                          <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                        </div>
+                      </div>
+                    </td>
+                  </table>
+                  <!-- Card End -->
+
+                </table>
+                <!-- 3*1 Table Card end-->
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Card collage end-->
+      <div class="container right" style="flex">
+        <div class="content">
+          <table>
+            <tr>
+              <td> <img class="imageSize"
+                  src="https://images.unsplash.com/photo-1581382575275-97901c2635b7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2787&q=80"
+                  alt=""> </td>
+
+              <td>
+                <h2 class="textSize">Abhinav Pandey</h2>
+                <p class="yearTextSize">2019-2020
+              </td>
+              </p>
+            </tr>
+
+          </table>
+          <button style="margin-left: 66px;" id="myBtn">View The Team</button>
+        </div>
+      </div>
+      <div class="container left">
+        <div class="content">
+          <table>
+            <tr>
+              <td> <img class="imageSize"
+                  src="https://images.unsplash.com/photo-1581382575275-97901c2635b7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2787&q=80"
+                  alt=""> </td>
+
+              <td>
+                <h2 class="textSize">Overall Head</h2>
+                <p class="yearTextSize">2018-2019
+              </td>
+              </p>
+            </tr>
+          </table>
+          <button style="margin-left: 20px;" id="myBtn">View The Team</button>
+        </div>
+      </div>
+      <div class="container right">
+        <div class="content">
+          <table>
+            <tr>
+              <td> <img class="imageSize"
+                  src="https://images.unsplash.com/photo-1581382575275-97901c2635b7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2787&q=80"
+                  alt=""> </td>
+
+              <td>
+                <h2 class="textSize">Overall Head</h2>
+                <p class="yearTextSize">2017-2018
+              </td>
+              </p>
+            </tr>
+          </table>
+          <button style="margin-left: 20px;" id="myBtn">View The Team</button>
+        </div>
+      </div>
+      <div class="container left">
+        <div class="content">
+          <table>
+            <tr>
+              <td> <img class="imageSize"
+                  src="https://images.unsplash.com/photo-1581382575275-97901c2635b7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2787&q=80"
+                  alt=""> </td>
+
+              <td>
+                <h2 class="textSize">Overall Head</h2>
+                <p class="yearTextSize">2016-2017
+              </td>
+              </p>
+            </tr>
+          </table>
+          <button style="margin-left: 20px;" id="myBtn">View The Team</button>
+        </div>
+      </div>
+      <div class="container right">
+        <div class="content">
+          <table>
+            <tr>
+              <td> <img class="imageSize"
+                  src="https://images.unsplash.com/photo-1581382575275-97901c2635b7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2787&q=80"
+                  alt=""> </td>
+
+              <td>
+                <h2 class="textSize">Overall Head</h2>
+                <p class="yearTextSize">2015-2016
+              </td>
+              </p>
+            </tr>
+          </table>
+          <button style="margin-left: 20px;" id="myBtn">View The Team</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div id="popup">
+    <div class="row">
+      <!--First User design starts here-->
+      <div class="profile-card">
+        <div class="profile-content">
+          <div class="profile-image">
+            <img src="assets/img/PSX_20220123_013305-modified.png" alt="first user" class="popup_img">
+          </div>
+          <div class="desc">
+            <h2>Kabir Makhija</h2>
+            <p>Overall Head</p>
+          </div>
+          <div class="btn-div">
+            <button class="btn" onclick="window.location.href='https://www.linkedin.com/in/kabirmakhija'"><i class="fa fa-linkedin" style="padding-right: 10px;"></i>Connect</button>
+          </div>
+        </div>
+      </div>
+      <!--First user design ends here-->
+      <!--second User design starts here-->
+      <div class="profile-card">
+        <div class="profile-content">
+          <div class="profile-image">
+            <img src="assets/img/team/shubhampavaskar.jpeg" alt="first user" class="popup_img">
+          </div>
+          <div class="desc">
+            <h2>Shubham Pawaskar</h2>
+            <p>Human Resource Head </p>
+          </div>
+          <div class="btn-div">
+            <button class="btn" onclick="window.location.href='https://www.linkedin.com/in/shubham-pawaskar-a1b362191'"><i class="fa fa-linkedin" style="padding-right: 10px;"></i>Connect</button>
+          </div>
+        </div>
+      </div>
+      <!--second user design ends here-->
+      <!--third User design starts here-->
+      <div class="profile-card">
+        <div class="profile-content">
+          <div class="profile-image">
+            <img src="assets/img/team/sakshisinha.jpeg" alt="first user" class="popup_img">
+          </div>
+          <div class="desc">
+            <h2>Sakshi Sinha</h2>
+            <p>Human Resource Head </p>
+          </div>
+          <div class="btn-div">
+            <button class="btn" onclick="window.location.href='https://www.linkedin.com/in/sakshisinha16'"><i class="fa fa-linkedin" style="padding-right: 10px;"></i>Connect</button>
+          </div>
+        </div>
+      </div>
+      <!--third user design ends here-->
+      <!--fourth User design starts here-->
+      <div class="profile-card">
+        <div class="profile-content">
+          <div class="profile-image">
+            <img src="assets/img/team/jayeshpatil.jpeg" alt="first user" class="popup_img">
+          </div>
+          <div class="desc">
+            <h2>Jayesh Patil</h2>
+            <p>Corporate Relation Head</p>
+          </div>
+          <div class="btn-div">
+            <button class="btn" onclick="window.location.href='https://www.linkedin.com/in/patiljayesh88'"><i class="fa fa-linkedin" style="padding-right: 10px;"></i>Connect</button>
+          </div>
+        </div>
+      </div>
+      <!--fourth user design ends here-->
+      <!--Fifth User design starts here-->
+      <div class="profile-card">
+        <div class="profile-content">
+          <div class="profile-image">
+            <img src="assets/img/team/kumargaurav.jpeg" alt="first user" class="popup_img">
+          </div>
+          <div class="desc">
+            <h2>Kumar Gaurav</h2>
+            <p>Technical and Innovation Head</p>
+          </div>
+          <div class="btn-div">
+            <button class="btn" onclick="window.location.href='https://www.linkedin.com/in/kumar-gaurav-3a70021a0'"><i class="fa fa-linkedin" style="padding-right: 10px;"></i>Connect</button>
+          </div>
+        </div>
+      </div>
+      <!--Fifth user design ends here-->
+      <!--six User design starts here-->
+      <div class="profile-card">
+        <div class="profile-content">
+          <div class="profile-image">
+            <img src="assets/img/team/asthasaxena.jpeg" alt="first user" class="popup_img">
+          </div>
+          <div class="desc">
+            <h2>Aastha Saxena</h2>
+            <p>Graphic Designing Head</p>
+          </div>
+          <div class="btn-div">
+            <button class="btn" onclick="window.location.href='https://www.linkedin.com/in/aastha-saxena-b8835a191'"><i class="fa fa-linkedin" style="padding-right: 10px;"></i>Connect</button>
+          </div>
+        </div>
+      </div>
+      <!--six user design ends here-->
+      <div class="profile-card">
+        <div class="profile-content">
+          <div class="profile-image">
+            <img src="assets/img/team/pranshugupta.jpeg" alt="first user" class="popup_img">
+          </div>
+          <div class="desc">
+            <h2>Pranshu Gupta</h2>
+            <p>Graphic Designing Head</p>
+          </div>
+          <div class="btn-div">
+            <button class="btn" onclick="window.location.href='https://www.linkedin.com/in/pranshhu'"><i class="fa fa-linkedin" style="padding-right: 10px;"></i>Connect</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="profile-card">
+        <div class="profile-content">
+          <div class="profile-image">
+            <img src="assets/img/team/sanchitsaxena.jpeg" alt="first user" class="popup_img">
+          </div>
+          <div class="desc">
+            <h2>Sanchit Saxena</h2>
+            <p>Media and Outreach Co-Head</p>
+          </div>
+          <div class="btn-div">
+            <button class="btn" onclick="window.location.href='https://www.linkedin.com/in/sanchit-saxena4'"><i class="fa fa-linkedin" style="padding-right: 10px;"></i>Connect</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="profile-card">
+        <div class="profile-content">
+          <div class="profile-image">
+            <img src="assets/img/team/vanditjain.jpeg" alt="first user" class="popup_img">
+          </div>
+          <div class="desc">
+            <h2>Vandit Jain</h2>
+            <p>Publication Head</p>
+          </div>
+          <div class="btn-div">
+            <button class="btn" onclick="window.location.href='https://www.linkedin.com/in/vanditjn'"><i class="fa fa-linkedin" style="padding-right: 10px;"></i>Connect</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="profile-card">
+        <div class="profile-content">
+          <div class="profile-image">
+            <img src="assets/img/team/vishakhajain.jpeg" alt="first user" class="popup_img">
+          </div>
+          <div class="desc">
+            <h2>Vishakha Jain</h2>
+            <p>Publication Co-Head</p>
+          </div>
+          <div class="btn-div">
+            <button class="btn" onclick="window.location.href='https://www.linkedin.com/in/vishakha-jain2912'"><i class="fa fa-linkedin" style="padding-right: 10px;"></i>Connect</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="profile-card">
+        <div class="profile-content">
+          <div class="profile-image">
+            <img src="assets/img/team/animeshkumavat.jpeg" alt="first user" class="popup_img">
+          </div>
+          <div class="desc">
+            <h2>Animesh Khumavat</h2>
+            <p>Corporate Relation Co Head</p>
+          </div>
+          <div class="btn-div">
+            <button class="btn" onclick="window.location.href='https://www.linkedin.com/in/animesh-pratap-kumawat-9b596617a/'"><i class="fa fa-linkedin" style="padding-right: 10px;"></i>Connect</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="profile-card">
+        <div class="profile-content">
+          <div class="profile-image">
+            <img src="assets/img/team/sparshgupta.jpeg" alt="first user" class="popup_img">
+          </div>
+          <div class="desc">
+            <h2>Sparsh Gupta</h2>
+            <p>Media and Outreach Head</p>
+          </div>
+          <div class="btn-div">
+            <button class="btn" onclick="window.location.href='https://www.linkedin.com/in/sparsh-gupta-639433191/'"><i class="fa fa-linkedin" style="padding-right: 10px;"></i>Connect</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="profile-card">
+        <div class="profile-content">
+          <div class="profile-image">
+            <img src="assets/img/team/shimulgupta.jpeg" alt="first user" class="popup_img">
+          </div>
+          <div class="desc">
+            <h2>Shimul Gupta</h2>
+            <p>Marketing Head</p>
+          </div>
+          <div class="btn-div">
+            <button class="btn" onclick="window.location.href='https://www.linkedin.com/in/shimul-gupta-755a86185'"><i class="fa fa-linkedin" style="padding-right: 10px;"></i>Connect</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="profile-card">
+        <div class="profile-content">
+          <div class="profile-image">
+            <img src="assets/img/team/adityabhateja.jpeg" alt="first user" class="popup_img">
+          </div>
+          <div class="desc">
+            <h2>Aditya Bhateja</h2>
+            <p>Marketing Head</p>
+          </div>
+          <div class="btn-div">
+            <button class="btn" onclick="window.location.href='https://www.linkedin.com/in/aditya-bhateja-8b9516194'"><i class="fa fa-linkedin" style="padding-right: 10px;"></i>Connect</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="profile-card">
+        <div class="profile-content">
+          <div class="profile-image">
+            <img src="assets/img/team/devanshverma.jpeg" alt="first user" class="popup_img">
+          </div>
+          <div class="desc">
+            <h2>Devansh Verma</h2>
+            <p>Public Relation Head</p>
+          </div>
+          <div class="btn-div">
+            <button class="btn" onclick="window.location.href='https://www.linkedin.com/in/devansh-verma-00535b191'"><i class="fa fa-linkedin" style="padding-right: 10px;"></i>Connect</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="profile-card">
+        <div class="profile-content">
+          <div class="profile-image">
+            <img src="assets/img/team/nikhilamauriya.jpeg" alt="first user" class="popup_img">
+          </div>
+          <div class="desc">
+            <h2>Nikhil Amauriya</h2>
+            <p>Public Relation Co-Head</p>
+          </div>
+          <div class="btn-div">
+            <button class="btn" onclick="window.location.href='https://www.linkedin.com/in/nikhil-amauriya-555216191'"><i class="fa fa-linkedin" style="padding-right: 10px;"></i>Connect</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <a href="#" onclick="toggle()" class="close_btn">Close</a>
+  </div>
+  <!-- footer Starts From Here -->
+
+  <footer>
+    <div class="footer">
+      <section class="contact section" id="contact">
+        <h2 class="section-title">Get In Touch</h2>
+        <div>
+          <div>
+            <img src="assets/img/Logo.png" class="footer_Image">
+            <img src="assets/img/bvucoep.png" class="footer_Image_bvp">
+            <h2 class="footer__text">Entrepreneurship Development Cell<br> Bharati Vidyapeeth University
+              College of Engineering Pune</h2>
+          </div>
+          <div class="contact__container bd-grid">
+            <form action="https://formsubmit.co/edcbvducoep@gmail.com" method="POST" class="contact__form">
+              <input type="text" placeholder="Name" name="name" class="contact__input" required />
+              <input type="mail" placeholder="Email" name="email" class="contact__input"
+                pattern="[^@\s]+@[^@\s]+\.[^@\s]+" title="Invalid email address" required />
+              <textarea name="message" placeholder="Message" cols="0" rows="10" class="contact__input"
+                style="resize: none;" required></textarea>
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_next"
+                value="https://b1tsh3ll.github.io/My-PortfOlio/assets/html/thank_you.html" /><br>
+              <input type="submit" value="Submit" class="contact__submit btn-sub">
+            </form>
+          </div>
+        </div>
+      </section>
+      <div class="copyright">
+        <h2>Copyright © 2021 Entrepreneurship Development Cell BV(DU)COEP</h2>
+      </div>
+    </div>
+  </footer>
+
+  <script type="text/javascript">
+    function toggle() {
+      var blur = document.getElementById("blur");
+      blur.classList.toggle("active");
+
+      var popup = document.getElementById("popup");
+      popup.classList.toggle("active");
+    }
+  </script>
+</body>
+<script src="assets/js/hamburger.js"></script>
+
+</html>
